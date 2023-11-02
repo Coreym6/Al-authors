@@ -5,7 +5,7 @@ excel_file_path = '150 Authors Geography with Birthplace included.xlsx'
 try:
      workbook = openpyxl.load_workbook(excel_file_path)
  # Select a specific sheet (replace 'Sheet1' with your sheet name)
-     sheet = workbook['Sheet1']
+     sheet = workbook['Sheet_authors']
 
     # Iterate through rows and columns
      for row in sheet.iter_rows():
