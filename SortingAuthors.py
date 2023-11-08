@@ -3,7 +3,7 @@ import csv
 def sort_csv(csv_file,sort_column, Columns_to_print):
     csv_file = '150 Author Geodata.csv'
     sort_column = 'Lastname'
-    Columns_to_print = ['Lastname','Firstname','Birthplace','Other Cities','County','education','adult residence','place of burial']
+    Columns_to_print = ['Lastname','Firstname','Birthplace','Other Cities','County','education','adult residence','place of burial', 'Lifespan', 'Colors']
 
     with open(csv_file,'r') as csvfile:
         csv_data = list(csv.DictReader(csvfile))
@@ -13,4 +13,4 @@ def sort_csv(csv_file,sort_column, Columns_to_print):
             print(output_row)
 # call back to the function right here 
     sort_csv(csv_file, sort_column, Columns_to_print)
-    print(sort_csv)
+   
