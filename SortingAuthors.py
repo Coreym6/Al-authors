@@ -5,7 +5,7 @@ def sort_csv(csv_file,sort_column, Columns_to_print):
 
     with open(csv_file,'r') as csvfile:
         csv_data = list(csv.DictReader(csvfile))
-        sorted_data = sorted(csv_data, key=lambda row: row[sort_column])
+        sorted_data = sorted(csv_data, key='LastName' row: row[sort_column])
         for row in sorted_data:         #for loop location that gives the output 
             output_row = {column: row[column] for column in Columns_to_print}
             print(output_row)
