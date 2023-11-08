@@ -13,3 +13,4 @@ def sort_csv(csv_file,sort_column, Columns_to_print):
             print(output_row)
 # call back to the function right here 
     sort_csv(csv_file, sort_column, Columns_to_print)
+    print(sort_csv)
