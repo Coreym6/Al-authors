@@ -4,14 +4,12 @@ import pandas as ps
 ''' #added the path for the 150 author geographical data as an test '''
 excel_file_path = '150 Authors Geography with Birthplace included.xlsx'
 try:
-     workbook = openpyxl.load_workbook(excel_file_path)
- # Select a specific sheet (replace 'Sheet1' with your sheet name)
-     sheet = workbook['Sheet_authors']
+     df = ps.read_excel(excel_file_path, sheet_name='150 Authors Geography with Birthplace included 1')
 
     # Iterate through rows and columns
-     for row in sheet.iter_rows():
-            for cell in row:
-                print(cell.value)  # Access the cell value
+     for index, row in df.iterrows():
+        for column, value in row.items():
+            print(f'Row {index}, Column {column}: {value}')
 
 except FileNotFoundError:
     print(f"File not found: {excel_file_path}")
