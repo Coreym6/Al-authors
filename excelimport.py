@@ -1,6 +1,6 @@
 #import pandas as ps 
 # need to set up an anaconda environment 
-import openpyxl 
+import pandas as ps
 ''' #added the path for the 150 author geographical data as an test '''
 excel_file_path = '150 Authors Geography with Birthplace included.xlsx'
 try:
