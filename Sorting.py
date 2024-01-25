@@ -9,7 +9,8 @@ def sort_csv(file_path, column, ascending=True):
     return data
 
 # Prompt the user for the file path
-file_path = input("Enter the file path: ")
+#change the file path to the AL Authors csv
+file_path = 'ALL Author Geography Metadata.csv'
 
 # Prompt the user for the column to sort by
 column = input("Enter the column to sort by: ")
