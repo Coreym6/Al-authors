@@ -22,8 +22,7 @@ ascending = True if order.lower() == 'asc' else False
 
 # making the list of the couunty associations 
 # all 67 counties in Alabama 
-county_list = [
-    county_list = [
+county_list = [ [
         'Autauga',
         'Baldwin',
         'Barbour',
