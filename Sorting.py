@@ -23,7 +23,9 @@ ascending = True if order.lower() == 'asc' else False
 # making the list of the couunty associations 
 # Sort the CSV file
 sorted_data = sort_csv(file_path, column, ascending)
-
+file_path = 'ALL Author Geography Metadata.csv'
+column = 'County'
+order = 'asc'
 # Print the sorted data
 for row in sorted_data:
     print(row)
