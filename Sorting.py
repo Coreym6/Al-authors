@@ -1,4 +1,5 @@
 import csv
+# Search up Python Dictionary; https://www.w3schools.com/python/python_dictionaries.asp
 
 # Prompt the user for the file path
 #change the file path to the AL Authors csv
