@@ -6,7 +6,7 @@ file_path = 'ALL Author Geography Metadata.csv'
 encoding = 'utf-8'
 
 # Prompt the user for the column to sort by
-column = 'County'
+column = 'County '
 # want it to specifically be the county column
 
 # Prompt the user for the sorting order
@@ -109,6 +109,7 @@ sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)
 for row in sorted_data:
     print(row)
 
+#PROBLEMS:
 # Approach 1: So there's really one of two ways we can do this; I can make it so the User can ask which county they want to search and then it will return the authors in that county based on the csv file
 # or I can make it so the user can search for a specific author and it will return the county that author is from( this can be in tandem with the line above)
 #Approach 2: I could just have it return all AUTHOR associations with All Counties County; displaying a list with the Authors and their respective counties
@@ -116,4 +117,5 @@ for row in sorted_data:
 # need to remove Unicode; https://www.pythonpool.com/remove-unicode-characters-python/#:~:text=Explanation%3A%201%20Firstly%2C%20we%20will%20take%20an%20input,output%20string%20with%20all%20the%20removed%20Unicode%20characters.
 # this error popped up, UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 7428: character maps to <undefined>
 # searched up the article to solve the error above and found this; https://stackoverflow.com/questions/49562499/how-to-fix-unicodedecodeerror-charmap-codec-cant-decode-byte-0x9d-in-position
-    
+# SOLVED THE ERROR ABOVE BY CHANGING THE ENCODING TO UTF-8;
+#Now this is the new problem; it's saying the County has a KeyError; I think it's because the County column has a space after the word Bibb; I'm going to try to remove the space and see if that works    
