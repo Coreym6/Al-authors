@@ -113,6 +113,16 @@ sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)
 for row in sorted_data:
     print(row)
 
+
+
+
+
+
+
+# HTML COLUMN NOTES BELOW:
+# still need a way to sort through the HTML code* in the right three columns for Authors 463-1750; Do this after the first 400+ authors are able to be sorted effciently. 
+# I will likely need to use the BeautifulSoup library to sort through the HTML code; I will need to do some research on how to do this.(https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
 #PROBLEMS:
 # Approach 1: So there's really one of two ways we can do this; I can make it so the User can ask which county they want to search and then it will return the authors in that county based on the csv file
 # or I can make it so the user can search for a specific author and it will return the county that author is from( this can be in tandem with the line above)
