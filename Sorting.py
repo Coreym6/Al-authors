@@ -6,7 +6,7 @@ file_path = 'ALL Author Geography Metadata.csv'
 encoding = 'utf-8'
 
 # Prompt the user for the column to sort by
-column = 'County '
+column = 'County'
 # want it to specifically be the county column
 
 # Prompt the user for the sorting order
