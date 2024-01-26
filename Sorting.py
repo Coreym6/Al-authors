@@ -122,4 +122,5 @@ for row in sorted_data:
 # this error popped up, UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 7428: character maps to <undefined>
 # searched up the article to solve the error above and found this; https://stackoverflow.com/questions/49562499/how-to-fix-unicodedecodeerror-charmap-codec-cant-decode-byte-0x9d-in-position
 # SOLVED THE ERROR ABOVE BY CHANGING THE ENCODING TO UTF-8;
-#Now this is the new problem; it's saying the County has a KeyError; I think it's because the County column has a space after the word Bibb; I'm going to try to remove the space and see if that works    
+#Now this is the new problem; it's saying the County has a KeyError; I think it's because the County column has a space after the word Bibb; I'm going to try to remove the space and see if that works 
+#https://stackoverflow.com/questions/10116518/im-getting-key-error-in-python   
