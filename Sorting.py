@@ -1,7 +1,7 @@
 import csv
 
-def sort_csv(file_path, column, column_name, ascending=True):
-    with open(file_path, 'r') as file:
+def sort_csv(file_path,encoding, column, column_name, ascending=True):
+    with open(file_path, encoding) as file:
         reader = csv.DictReader(file)
         data = list(reader)
     
@@ -101,7 +101,7 @@ county_list = [ [
 # this will be helpful for the 400+ authors on the list, but for the other amount, we will likely need something to sort out the html text
 # Sort the CSV file
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
-sorted_data = sort_csv(file_path, column,column_name, ascending)
+sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)
 
 
 # Print the sorted data
