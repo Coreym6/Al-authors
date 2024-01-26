@@ -1,7 +1,7 @@
 import csv
 
 def sort_csv(file_path,encoding, column, column_name, ascending=True):
-    with open(file_path, encoding) as file:
+    with open(file_path, encoding) as file: #if this doesn't work, go back to 'r' instead of encoding 
         reader = csv.DictReader(file)
         data = list(reader)
     
