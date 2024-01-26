@@ -14,6 +14,8 @@ file_path = 'ALL Author Geography Metadata.csv'
 
 # Prompt the user for the column to sort by
 column = input("Enter the column to sort by: ")
+# want it to specifically be the county column
+
 
 # Prompt the user for the sorting order
 order = input("Enter the sorting order (asc/desc): ")
