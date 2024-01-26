@@ -1,6 +1,6 @@
 import csv
 
-def sort_csv(file_path, column, ascending=True):
+def sort_csv(file_path, column, column_name, ascending=True):
     with open(file_path, 'r') as file:
         reader = csv.DictReader(file)
         data = list(reader)
