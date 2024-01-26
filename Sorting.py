@@ -101,6 +101,7 @@ def sort_csv(file_path,encoding, column, column_name, ascending=True):
     
     data.sort(key=lambda row: row[column], reverse=not ascending)
     return data
+
 sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)
 
 
