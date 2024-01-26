@@ -102,6 +102,12 @@ county_list = [ [
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
 sorted_data = sort_csv(file_path, column,column_name, ascending)
 
+
 # Print the sorted data
 for row in sorted_data:
     print(row)
+
+# Approach 1: So there's really one of two ways we can do this; I can make it so the User can ask which county they want to search and then it will return the authors in that county based on the csv file
+# or I can make it so the user can search for a specific author and it will return the county that author is from( this can be in tandem with the line above)
+#Approach 2: I could just have it return all AUTHOR associations with All Counties County; displaying a list with the Authors and their respective counties
+# PSUEDOCODE:  
