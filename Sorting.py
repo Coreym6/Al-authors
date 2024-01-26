@@ -1,7 +1,5 @@
 import csv
 
-
-
 # Prompt the user for the file path
 #change the file path to the AL Authors csv
 file_path = 'ALL Author Geography Metadata.csv'
