@@ -18,9 +18,10 @@ column = 'County'
 
 # Prompt the user for the sorting order
 order = input("Enter the sorting order (asc/desc): ")
-
+order = order.lower()
 # Convert the sorting order to a boolean value
 ascending = True if order.lower() == 'asc' else False
+descending = False if order.lower() == 'desc' else True
 
 #A place to put the First Name and Last Name column to return such, for ex. HENRY AARON 
 column_name = 'Author_First_Name_Last_Name'
