@@ -1,12 +1,6 @@
 import csv
 
-def sort_csv(file_path,encoding, column, column_name, ascending=True):
-    with open(file_path, 'r') as file: #if this doesn't work, go back to 'r' instead of encoding; I tried utf-8 instead; neither worked lol 
-        reader = csv.DictReader(file)
-        data = list(reader)
-    
-    data.sort(key=lambda row: row[column], reverse=not ascending)
-    return data
+
 
 # Prompt the user for the file path
 #change the file path to the AL Authors csv
@@ -101,6 +95,14 @@ county_list = [ [
 # this will be helpful for the 400+ authors on the list, but for the other amount, we will likely need something to sort out the html text
 # Sort the CSV file
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
+
+def sort_csv(file_path,encoding, column, column_name, ascending=True):
+    with open(file_path, 'r') as file: #if this doesn't work, go back to 'r' instead of encoding; I tried utf-8 instead; neither worked lol 
+        reader = csv.DictReader(file)
+        data = list(reader)
+    
+    data.sort(key=lambda row: row[column], reverse=not ascending)
+    return data
 sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)
 
 
