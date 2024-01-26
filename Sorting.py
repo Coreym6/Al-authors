@@ -111,3 +111,4 @@ for row in sorted_data:
 # or I can make it so the user can search for a specific author and it will return the county that author is from( this can be in tandem with the line above)
 #Approach 2: I could just have it return all AUTHOR associations with All Counties County; displaying a list with the Authors and their respective counties
 # PSUEDOCODE:  
+# need to remove Unicode; https://www.pythonpool.com/remove-unicode-characters-python/#:~:text=Explanation%3A%201%20Firstly%2C%20we%20will%20take%20an%20input,output%20string%20with%20all%20the%20removed%20Unicode%20characters.
