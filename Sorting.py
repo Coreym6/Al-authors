@@ -95,7 +95,7 @@ county_list = [ [
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
 
 def sort_csv(file_path,encoding, column, column_name, ascending=True):
-    with open(file_path, 'r') as file: #if this doesn't work, go back to 'r' instead of encoding; I tried utf-8 instead; neither worked lol 
+    with open(file_path, 'r', encoding='utf-8') as file: #if this doesn't work, go back to 'r' instead of encoding; I tried utf-8 instead; neither worked lol 
         reader = csv.DictReader(file)
         data = list(reader)
     
