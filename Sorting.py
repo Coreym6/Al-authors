@@ -101,10 +101,7 @@ county_list = [ [
 # Sort the CSV file
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
 sorted_data = sort_csv(file_path, column,column_name, ascending)
-file_path = 'ALL Author Geography Metadata.csv'
-column = 'County'
-column_name = 'Author_First_Name_Last_Name'
-order = 'asc'
+
 # Print the sorted data
 for row in sorted_data:
     print(row)
