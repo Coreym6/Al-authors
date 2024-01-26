@@ -118,9 +118,11 @@ for row in sorted_data:
 # or I can make it so the user can search for a specific author and it will return the county that author is from( this can be in tandem with the line above)
 #Approach 2: I could just have it return all AUTHOR associations with All Counties County; displaying a list with the Authors and their respective counties
 # PSUEDOCODE:  
-# need to remove Unicode; https://www.pythonpool.com/remove-unicode-characters-python/#:~:text=Explanation%3A%201%20Firstly%2C%20we%20will%20take%20an%20input,output%20string%20with%20all%20the%20removed%20Unicode%20characters.
+    
+# FIRST RUN ERROR: need to remove Unicode; https://www.pythonpool.com/remove-unicode-characters-python/#:~:text=Explanation%3A%201%20Firstly%2C%20we%20will%20take%20an%20input,output%20string%20with%20all%20the%20removed%20Unicode%20characters.
 # this error popped up, UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 7428: character maps to <undefined>
 # searched up the article to solve the error above and found this; https://stackoverflow.com/questions/49562499/how-to-fix-unicodedecodeerror-charmap-codec-cant-decode-byte-0x9d-in-position
 # SOLVED THE ERROR ABOVE BY CHANGING THE ENCODING TO UTF-8;
-#Now this is the new problem; it's saying the County has a KeyError; I think it's because the County column has a space after the word Bibb; I'm going to try to remove the space and see if that works 
+
+#SECOND RUN ERROR: Now this is the new problem; it's saying the County has a KeyError; I think it's because the County column has a space after the word Bibb; I'm going to try to remove the space and see if that works 
 #https://stackoverflow.com/questions/10116518/im-getting-key-error-in-python   
