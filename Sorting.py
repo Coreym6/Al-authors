@@ -89,7 +89,7 @@ county_list = [ [
         'Wilcox',
         'Winston'
     ]
-]
+] # Add correlation between column and County Name 
 if column == 'County':
     print(column)
 #Sanity check  
