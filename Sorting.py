@@ -89,7 +89,11 @@ county_list = [ [
         'Wilcox',
         'Winston'
     ]
-] # REMEMBER THIS IS COLUMN 7 IN THE CSV FILE , "COUNTY"
+]
+if column == 'County':
+    print(column)
+#Sanity check  
+# REMEMBER THIS IS COLUMN 7 IN THE CSV FILE , "COUNTY"
 # this will be helpful for the 400+ authors on the list, but for the other amount, we will likely need something to sort out the html text
 # Sort the CSV file
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
