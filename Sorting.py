@@ -95,7 +95,7 @@ county_list = [ [
         'Winston'
     ]
 ]
-
+# this will be helpful for the 400+ authors on the list, but for the other amount, we will likely need something to sort out the html text
 # Sort the CSV file
 sorted_data = sort_csv(file_path, column, ascending)
 file_path = 'ALL Author Geography Metadata.csv'
