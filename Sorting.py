@@ -174,3 +174,5 @@ for row in sorted_data:
 
 #SECOND RUN ERROR: Now this is the new problem; it's saying the County has a KeyError; I think it's because the County column has a space after the word Bibb; I'm going to try to remove the space and see if that works 
 #https://stackoverflow.com/questions/10116518/im-getting-key-error-in-python   
+    
+#THIRD RUN ERROR: FileNotFoundError: [Errno 2] No such file or directory: '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
