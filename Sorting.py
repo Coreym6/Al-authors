@@ -3,6 +3,7 @@ import csv
 
 # Prompt the user for the file path
 #change the file path to the AL Authors csv
+# maybe use matplot lib or some other visualization to determine frequency. 
 
 
 # Prompt the user for the column to sort by
