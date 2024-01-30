@@ -104,7 +104,8 @@ def get_authors_by_county(file_path, encoding, county):
 file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Sorting.csv'
 #edit the file path to the AL Authors csv file '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Sorting.csv'
 encoding = 'utf-8' # to handle the invisible unicode characters 
-county = 'Autauga'
+county = 'Jefferson'
+#can likely test it with Jefferson since I know it will return a lot of authors; then make it determined on user input
 # will likely have to reverse this; I want to be able to search for the county and return the authors in that county
 
 authors = get_authors_by_county(file_path, encoding, county)
