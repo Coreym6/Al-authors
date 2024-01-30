@@ -3,8 +3,7 @@ import csv
 
 # Prompt the user for the file path
 #change the file path to the AL Authors csv
-file_path = 'ALL Author Geography Metadata.csv'
-encoding = 'utf-8'
+
 
 # Prompt the user for the column to sort by
 column = 'County'
