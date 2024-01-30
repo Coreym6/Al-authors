@@ -93,6 +93,26 @@ county_list = [ [
 ] # Add correlation between column and County Name 
 
 
+# Authors by county association 
+def get_authors_by_county(file_path, encoding, county):
+    with open(file_path, 'r', encoding=encoding) as file:
+        reader = csv.DictReader(file)
+        authors = [row['Author_First_Name_Last_Name'] for row in reader if row['County'] == county]
+
+    return authors
+
+file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Sorting.csv'
+#edit the file path to the AL Authors csv file
+encoding = 'utf-8'
+county = 'Autauga'
+# will likely have to reverse this; I want to be able to search for the county and return the authors in that county
+
+authors = get_authors_by_county(file_path, encoding, county)
+
+# Print the associated authors
+for author in authors:
+    print(author)
+
 def get_county_values(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
         reader = csv.DictReader(file)
