@@ -92,6 +92,9 @@ county_list = [ [
     ]
 ] # Add correlation between column and County Name 
 
+# pull all names from the csv file and then put them in a list; then sort them by county association
+# then return the list of authors in that county
+
 
 # Authors by county association 
 def get_authors_by_county(file_path, encoding, county):
