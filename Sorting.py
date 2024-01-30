@@ -91,8 +91,20 @@ county_list = [ [
         'Winston'
     ]
 ] # Add correlation between column and County Name 
-if column == 'County':
-    print(column)
+
+
+def get_county_values(file_path, encoding):
+    with open(file_path, 'r', encoding=encoding) as file:
+        reader = csv.DictReader(file)
+        county_values = [row['County'] for row in reader]
+
+    return county_values
+
+county_values = get_county_values(file_path, encoding)
+
+# Print the county values
+for county in county_values:
+    print(county)
 #Sanity check  
 # REMEMBER THIS IS COLUMN 7 IN THE CSV FILE , "COUNTY"
 # this will be helpful for the 400+ authors on the list, but for the other amount, we will likely need something to sort out the html text
