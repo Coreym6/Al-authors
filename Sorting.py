@@ -101,7 +101,7 @@ def get_authors_by_county(file_path, encoding, county):
 
     return authors
 
-file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Sorting.csv'
+file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
 #edit the file path to the AL Authors csv file '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Sorting.csv'
 encoding = 'utf-8' # to handle the invisible unicode characters 
 county = 'Jefferson'
