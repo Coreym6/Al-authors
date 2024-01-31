@@ -103,7 +103,7 @@ def Author_names(file_path, encoding):
         author_names = [column['Author_First_Name_Last_Name'] for column in reader]
         print(author_names)
     return author_names
-
+# need to clean up code and then assess from here 
 
 # probably should pull all the author first names followed by their last names and put them in a list;
 # pull all names from the csv file and then put them in a list; then sort them by county association
