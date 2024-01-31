@@ -101,7 +101,7 @@ print(county_list)
 def get_authors_by_county(file_path, encoding, county):
     with open(file_path, 'r', encoding=encoding) as file:
         reader = csv.DictReader(file)
-        authors = [column['Author_First_Name_Last_Name'] for column in reader if column['Count'] == county]
+        authors = [column['Author_First_Name_Last_Name'] for column in reader if column['County'] == county]
         # above is the problem line, something is up with county
     return authors
 
@@ -121,7 +121,7 @@ for author in authors:
 def get_county_values(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
         reader = csv.DictReader(file)
-        county_values = [column['Count'] for column in reader]
+        county_values = [column['County'] for column in reader]
 
     return county_values
 
