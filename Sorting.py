@@ -121,7 +121,7 @@ for author in authors:
 def get_county_values(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
         reader = csv.DictReader(file)
-        county_values = [row['County'] for row in reader]
+        county_values = [column['County'] for column in reader]
 
     return county_values
 
