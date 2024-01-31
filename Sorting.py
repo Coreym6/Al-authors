@@ -95,7 +95,10 @@ county_list = [ [
 print(county_list)
 def Author_names(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
-        reader = csv.DictReader(file)
+        dialect = csv.Sniffer().sniff(file.read(1024))
+        dialect.skipinitialspace = True
+        file.seek(0)
+        reader = csv.DictReader(file, dialect=dialect)
         author_names = [column['Author_First_Name_Last_Name'] for column in reader]
     return author_names
 
