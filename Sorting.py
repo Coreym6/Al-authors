@@ -151,8 +151,8 @@ sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)'''
 
 
 # Print the sorted data
-for row in sorted_data:
-    print(row)
+#for row in sorted_data:
+    #print(row)
 
 
 
