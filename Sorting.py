@@ -101,7 +101,7 @@ county_list = [ [
 def get_authors_by_county(file_path, encoding, county):
     with open(file_path, 'r', encoding=encoding) as file:
         reader = csv.DictReader(file)
-        authors = [row['Author_First_Name_Last_Name'] for row in reader if row['County'] == county]
+        authors = [column['Author_First_Name_Last_Name'] for column in reader if column['County'] == county]
 
     return authors
 
