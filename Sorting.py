@@ -93,6 +93,8 @@ county_list = [ [
     ]
 ] # Add correlation between column and County Name 
 print(county_list)
+
+# probably should pull all the author first names followed by their last names and put them in a list;
 # pull all names from the csv file and then put them in a list; then sort them by county association
 # then return the list of authors in that county
 #have to change file path to the csv file to your own device
