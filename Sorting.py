@@ -95,7 +95,10 @@ county_list = [ [
 print(county_list)
 # pull all names from the csv file and then put them in a list; then sort them by county association
 # then return the list of authors in that county
-
+ile_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
+# Have to double check
+encoding = 'utf-8' # to handle the invisible unicode characters 
+county = 'Jefferson'
 
 # Authors by county association 
 def get_authors_by_county(file_path, encoding, county):
@@ -104,10 +107,7 @@ def get_authors_by_county(file_path, encoding, county):
         authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('County') == county]
     return authors
 
-file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
-# Have to double check
-encoding = 'utf-8' # to handle the invisible unicode characters 
-county = 'Jefferson'
+
 #can likely test it with Jefferson since I know it will return a lot of authors; then make it determined on user input
 # will likely have to reverse this; I want to be able to search for the county and return the authors in that county
 
