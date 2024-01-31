@@ -100,7 +100,9 @@ def Author_names(file_path, encoding):
         file.seek(0)
         reader = csv.DictReader(file, dialect=dialect)
         author_names = [column['Author_First_Name_Last_Name'] for column in reader]
+        print(author_names)
     return author_names
+
 
 # probably should pull all the author first names followed by their last names and put them in a list;
 # pull all names from the csv file and then put them in a list; then sort them by county association
