@@ -131,8 +131,8 @@ for author in authors:
 county_values = get_county_values(file_path, encoding)'''
 
 # Print the county values
-for county in county_values:
-    print(county)
+'''for county in county_values:
+    print(county)'''
 #Sanity check  
 # REMEMBER THIS IS COLUMN 7 IN THE CSV FILE , "COUNTY"
 # this will be helpful for the 400+ authors on the list, but for the other amount, we will likely need something to sort out the html text
