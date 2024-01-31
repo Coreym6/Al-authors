@@ -95,7 +95,7 @@ county_list = [ [
 print(county_list)
 # pull all names from the csv file and then put them in a list; then sort them by county association
 # then return the list of authors in that county
-ile_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
+file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
 # Have to double check
 encoding = 'utf-8' # to handle the invisible unicode characters 
 county = 'Jefferson'
