@@ -108,7 +108,7 @@ def get_authors_by_county(file_path, encoding, county):
         dialect.skipinitialspace = True
         file.seek(0)
         reader = csv.DictReader(file, dialect=dialect)
-        authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('County') == county]
+        authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('Jefferson') == county]
     return authors
 #This works but has an empty list that it returns 
 print(get_authors_by_county(file_path, encoding, county))
