@@ -93,6 +93,11 @@ county_list = [ [
     ]
 ] # Add correlation between column and County Name 
 print(county_list)
+def Author_names(file_path, encoding):
+    with open(file_path, 'r', encoding=encoding) as file:
+        reader = csv.DictReader(file)
+        author_names = [column['Author_First_Name_Last_Name'] for column in reader]
+    return author_names
 
 # probably should pull all the author first names followed by their last names and put them in a list;
 # pull all names from the csv file and then put them in a list; then sort them by county association
