@@ -109,7 +109,7 @@ def get_authors_by_county(file_path, encoding, county):
         reader = csv.DictReader(file, dialect=dialect)
         authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('County') == county]
     return authors
-
+#This works but has an empty list that it returns 
 print(get_authors_by_county(file_path, encoding, county))
 
 #can likely test it with Jefferson since I know it will return a lot of authors; then make it determined on user input
