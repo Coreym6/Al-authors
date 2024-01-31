@@ -103,11 +103,13 @@ county = 'Jefferson'
 # Authors by county association 
 def get_authors_by_county(file_path, encoding, county):
     with open(file_path, 'r', encoding=encoding) as file:
-        reader = csv.DictReader(file)
+        dialect = csv.Sniffer().sniff(file.read(1024))
+        dialect.skipinitialspace = True
+        file.seek(0)
+        reader = csv.DictReader(file, dialect=dialect)
         authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('County') == county]
-        # will likely have to use the Dialect.skipinitialspace; The spaces in the csv is the problem;
-        #documentation https://docs.python.org/3/library/csv.html#csv.Dialect.skipinitialspace
     return authors
+
 
 
 #can likely test it with Jefferson since I know it will return a lot of authors; then make it determined on user input
