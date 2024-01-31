@@ -11,11 +11,11 @@ column = 'County'
 # want it to specifically be the county column
 
 # Prompt the user for the sorting order
-order = input("Enter the sorting order (asc/desc): ")
+'''order = input("Enter the sorting order (asc/desc): ")
 order = order.lower()
 # Convert the sorting order to a boolean value
 ascending = True if order.lower() == 'asc' else False
-descending = False if order.lower() == 'desc' else True
+descending = False if order.lower() == 'desc' else True'''
 
 #A place to put the First Name and Last Name column to return such, for ex. HENRY AARON 
 column_name = 'Author_First_Name_Last_Name'
@@ -92,7 +92,7 @@ county_list = [ [
         'Winston'
     ]
 ] # Add correlation between column and County Name 
-
+print(county_list)
 # pull all names from the csv file and then put them in a list; then sort them by county association
 # then return the list of authors in that county
 
@@ -102,7 +102,7 @@ def get_authors_by_county(file_path, encoding, county):
     with open(file_path, 'r', encoding=encoding) as file:
         reader = csv.DictReader(file)
         authors = [column['Author_First_Name_Last_Name'] for column in reader if column['County'] == county]
-
+        # above is the problem line, something is up with county
     return authors
 
 file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
@@ -136,7 +136,7 @@ for county in county_values:
 # Sort the CSV file
 #COLUMN 3 is the column for 'Author_First_Name_Last_Name'
 
-def sort_csv(file_path,encoding, column, column_name, ascending=True):
+'''def sort_csv(file_path,encoding, column, column_name, ascending=True):
     with open(file_path, 'r', encoding='utf-8') as file: #if this doesn't work, go back to 'r' instead of encoding; I tried utf-8 instead; neither worked lol 
         reader = csv.DictReader(file)
         data = list(reader)
@@ -144,7 +144,7 @@ def sort_csv(file_path,encoding, column, column_name, ascending=True):
     data.sort(key=lambda row: row[column], reverse=not ascending)
     return data
 
-sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)
+sorted_data = sort_csv(file_path, encoding, column,column_name, ascending)'''
 
 
 # Print the sorted data
