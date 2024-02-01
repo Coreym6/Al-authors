@@ -91,7 +91,8 @@ county_list = [ [
         'Wilcox',
         'Winston'
     ]
-] # Add correlation between column and County Name 
+] # Add correlation between column and County Name
+# Possibly compose a sub list or conditional if it finds the county name in the list, then it will return the authors in that county  
 print(county_list)
 def Author_names(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
