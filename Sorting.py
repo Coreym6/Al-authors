@@ -97,6 +97,7 @@ print(county_list)
 def Author_names(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
         file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/ALL Author Geography Metadata.csv'
+        # change the file path to the csv file to your own device; the excel file is on box 
         dialect = csv.Sniffer().sniff(file.read(1024))
         dialect.skipinitialspace = True
         file.seek(0)
