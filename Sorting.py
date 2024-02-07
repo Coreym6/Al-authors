@@ -312,6 +312,8 @@ def author_data(csvData):
 author_data(county_data())
 
 county_name = input("Enter the county you would like to search for: ")
+county_name = county_name.strip()
+
 def get_authors_by_county(csvData, county_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
     filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name]
@@ -321,7 +323,6 @@ def get_authors_by_county(csvData, county_name):
     else:
         print("Authors in", county_name, ":", authors)
     return authors
-get_authors_by_county(csvData, county_name)
 
 
 # got all of them as missing counties;
