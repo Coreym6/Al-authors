@@ -273,25 +273,28 @@ authors_names_array = [
 
 
 # county is unnamed column 7 in the csv file 
-csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
-print(csvData.columns, '\n')
-present_counties = csvData['Unnamed: 6'].unique()
-print("Based upon the data given, here are the counties with author representation:", present_counties, '\n')
+def county_data():
+    csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
+    print(csvData.columns, '\n')
+    present_counties = csvData['Unnamed: 6'].unique()
+    print("Based upon the data given, here are the counties with author representation:", present_counties, '\n')
 
-missing_counties = [county for county in county_list if county.strip() not in present_counties]
-print("Missing counties:", missing_counties)
+    missing_counties = [county for county in county_list if county.strip() not in present_counties]
+    print("Missing counties:", missing_counties)
 
-missing_counties_count = len(missing_counties)
-print("Number of missing counties:", missing_counties_count)
+    missing_counties_count = len(missing_counties)
+    print("Number of missing counties:", missing_counties_count)
+    return csvData
 
-present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
-print("here are the authors that are present in the data set", present_authors)
+def author_data(csvData):
+    present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
+    print("here are the authors that are present in the data set", present_authors)
 
-missing_authors = [author for author in authors_names_array if author.strip() not in present_authors]
-print("\033[34mMissing authors:", missing_authors)
+    missing_authors = [author for author in authors_names_array if author.strip() not in present_authors]
+    print("\033[34mMissing authors:", missing_authors)
 
-missing_authors_count = len(missing_authors)
-print("\033[34mNumber of missing authors:", missing_authors_count, "\033[0m")
+    missing_authors_count = len(missing_authors)
+    print("\033[34mNumber of missing authors:", missing_authors_count, "\033[0m")
 
 
 # got all of them as missing counties;
