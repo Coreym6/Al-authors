@@ -294,6 +294,20 @@ print("Missing authors:", missing_authors)
 #print(filtered_csvData)
 #print(csvData)'''
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+####################################################################################################################
 def Author_names(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
         file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv'
