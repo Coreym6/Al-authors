@@ -286,6 +286,7 @@ def county_data():
     print("Number of missing counties:", missing_counties_count)
     return csvData
 
+county_data()
 def author_data(csvData):
     present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
     print("here are the authors that are present in the data set", present_authors)
@@ -296,6 +297,7 @@ def author_data(csvData):
     missing_authors_count = len(missing_authors)
     print("\033[34mNumber of missing authors:", missing_authors_count, "\033[0m")
 
+author_data(county_data())
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
