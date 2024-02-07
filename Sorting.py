@@ -308,11 +308,11 @@ def author_data(csvData):
 
     missing_authors_count = len(missing_authors)
     print("\033[34mNumber of missing authors:", missing_authors_count, "\033[0m")
-
+    return csvData
 author_data(county_data())
 
 
-def get_authors_by_county(csvData, county):
+def get_authors_by_county(csvData, county_name):
     county_name = input("Enter the county you would like to search for: ")
     filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name]
     authors = filtered_csvData['Unnamed: 2'].tolist()
@@ -320,9 +320,9 @@ def get_authors_by_county(csvData, county):
         print("There are no authors in the county", county_name)
     else:
         print("Authors in", county_name, ":", authors)
-    return authors
+    return csvData, county
 
-get_authors_by_county()
+
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
 
