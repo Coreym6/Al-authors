@@ -102,7 +102,7 @@ print(csvData.columns)
 present_counties = csvData['County'].unique()
 missing_counties = [county for county in county_list if county.strip() not in present_counties]
 print("Missing counties:", missing_counties)
-present_authors = csvData['Author_First_Name_Last_Name'].unique()
+present_authors = csvData['Unnamed: 1'].unique()
 print(present_authors)
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
