@@ -285,7 +285,14 @@ missing_counties_count = len(missing_counties)
 print("Number of missing counties:", missing_counties_count)
 
 present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
-print(present_authors)
+print("here are the authors that are present in the data set", present_authors)
+
+missing_authors = [author for author in authors_names_array if author.strip() not in present_authors]
+print("Missing authors:", missing_authors)
+
+missing_authors_count = len(missing_authors)
+print("Number of missing authors:", missing_authors_count)
+
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
