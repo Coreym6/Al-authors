@@ -102,6 +102,9 @@ print(csvData.columns)
 present_counties = csvData['County'].unique()
 missing_counties = [county for county in county_list if county.strip() not in present_counties]
 print("Missing counties:", missing_counties)
+# got all of them as missing counties;
+# I think that maybe it's pointing to the wrong column. 
+
 #csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
 #filtered_csvData = csvData[csvData['County'].isin(county_list)]
 #print(filtered_csvData)
