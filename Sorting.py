@@ -97,8 +97,9 @@ county_list = [
 print(county_list) #sanity check
 
 
-csvData = pd.read_csv('Spring Semester dataset2.csv')
-csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
+csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
+print(csvData.columns)
+csvData.sort_values(["Unnamed: 7"], axis=0, ascending=[False], inplace=True)
 print(csvData)
 
 def Author_names(file_path, encoding):
