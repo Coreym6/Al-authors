@@ -1,9 +1,5 @@
 import csv
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import os
-
 # Search up Python Dictionary; https://www.w3schools.com/python/python_dictionaries.asp
 
 # Prompt the user for the file path
@@ -291,6 +287,7 @@ def county_data():
     return csvData
 
 county_data()
+
 def author_data(csvData):
     present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
     print("here are the authors that are present in the data set", present_authors)
