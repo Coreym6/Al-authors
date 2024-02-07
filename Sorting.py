@@ -93,7 +93,8 @@ county_list = [
         'Winston'
     ]
 
-
+#array of Author names in the 153 public list
+#The csv will contain other authors that are not in the list. 
 authors_names_array = [
     "James Agee",
     "Mary Raymond Andrews Shipman",
