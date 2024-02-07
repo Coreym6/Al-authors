@@ -291,7 +291,7 @@ missing_authors = [author for author in authors_names_array if author.strip() no
 print("Missing authors:", missing_authors)
 
 missing_authors_count = len(missing_authors)
-print("Number of missing authors:", missing_authors_count)
+print("\033[34mNumber of missing authors:", missing_authors_count, "\033[0m")
 
 
 # got all of them as missing counties;
