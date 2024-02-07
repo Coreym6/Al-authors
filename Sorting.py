@@ -288,7 +288,7 @@ def county_data():
 
 
     # Plot the number of missing counties
-    plt.bar(range(len(missing_counties)), [1] * len(missing_counties))
+    plt.bar(range(len(missing_counties)), [1] * len(present_counties))
     plt.xlabel('Missing Counties')
     plt.ylabel('Count')
     plt.title('Number of Missing Counties')
@@ -296,11 +296,11 @@ def county_data():
     plt.show()
 
     # Plotting the graph
-    plt.bar(range(len(missing_counties)), missing_counties_count)
+    plt.bar(range(len(missing_counties)), present_counties)
     plt.xlabel('Missing Counties')
     plt.ylabel('Count')
     plt.title('Number of Missing Counties')
-    plt.xticks(range(len(missing_counties)), missing_counties)
+    plt.xticks(range(len(missing_counties)), present_counties, rotation='vertical')
     plt.show()
     return csvData
 
