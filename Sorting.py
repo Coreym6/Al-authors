@@ -96,12 +96,12 @@ county_list = [
 # Possibly compose a sub list or conditional if it finds the county name in the list, then it will return the authors in that county  
 print(county_list) #sanity check
 
-
+# county is unnamed column 7 in the csv file 
 csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
 print(csvData.columns)
-'''csvData.sort_values(["Unnamed: 7"], axis=0, ascending=[False], inplace=True)
-filtered_csvData = csvData[csvData['Unnamed: 7 '].isin(county_list)]
-print(filtered_csvData)
+csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
+'''filtered_csvData = csvData[csvData['Unnamed: 7 '].isin(county_list)]
+print(filtered_csvData)'''
 #print(csvData)'''
 
 def Author_names(file_path, encoding):
