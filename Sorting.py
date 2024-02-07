@@ -117,16 +117,16 @@ encoding = 'utf-8' # to handle the invisible unicode characters
 county = 'Jefferson'
 
 # Authors by county association 
-def get_authors_by_county(file_path, encoding, county):
+def get_authors_by_county(file_path, encoding, county_list):
     with open(file_path, 'r', encoding=encoding) as file:
         dialect = csv.Sniffer().sniff(file.read(1024))
         dialect.skipinitialspace = True
         file.seek(0)
         reader = csv.DictReader(file, dialect=dialect)
-        authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('Jefferson') == county]
+        authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('Jefferson') == county_list]
     return authors
 #This works but has an empty list that it returns 
-print(get_authors_by_county(file_path, encoding, county))
+print(get_authors_by_county(file_path, encoding, county_list))
 
 #can likely test it with Jefferson since I know it will return a lot of authors; then make it determined on user input
 # will likely have to reverse this; I want to be able to search for the county and return the authors in that county
