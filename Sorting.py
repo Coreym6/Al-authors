@@ -96,7 +96,7 @@ county_list = [
 print(county_list) #sanity check
 
 
-csvData = pandas.read_csv('Spring Semester dataset2.csv')
+csvData = pd.read_csv('Spring Semester dataset2.csv')
 csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
 print(csvData)
 
