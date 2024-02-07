@@ -18,8 +18,7 @@ ascending = True if order.lower() == 'asc' else False
 descending = False if order.lower() == 'desc' else True'''
 
 #A place to put the First Name and Last Name column to return such, for ex. HENRY AARON 
-column_name = 'Author_First_Name_Last_Name'
-print(column_name)
+
 # making the list of the couunty associations 
 # all 67 counties in Alabama 
 county_list = [ [
