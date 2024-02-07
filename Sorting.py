@@ -126,7 +126,7 @@ def get_authors_by_county(file_path, encoding, county_list):
         authors = [column.get('Author_First_Name_Last_Name', '') for column in reader if column.get('Jefferson') == county_list]
     return authors
 #This works but has an empty list that it returns 
-print(get_authors_by_county(file_path, encoding, county_list))
+# I think the problem is that it's not returning the authors in the county; it's just returning the authors in the csv file
 
 #can likely test it with Jefferson since I know it will return a lot of authors; then make it determined on user input
 # will likely have to reverse this; I want to be able to search for the county and return the authors in that county
@@ -134,8 +134,6 @@ print(get_authors_by_county(file_path, encoding, county_list))
 authors = get_authors_by_county(file_path, encoding, county)
 
 # Print the associated authors
-for author in authors:
-    print(author)
 
 '''def get_county_values(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
