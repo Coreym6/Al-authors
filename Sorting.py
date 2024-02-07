@@ -99,11 +99,11 @@ print(county_list) #sanity check
 # county is unnamed column 7 in the csv file 
 csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
 print(csvData.columns)
-present_counties = csvData['County'].unique()
+present_counties = csvData['Unnamed: 6'].unique()
 missing_counties = [county for county in county_list if county.strip() not in present_counties]
 print("Missing counties:", missing_counties)
-present_authors = csvData['Unnamed: 1'].unique()
-print(present_authors)
+#present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
+#print(present_authors)
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
 
