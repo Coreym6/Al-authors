@@ -311,16 +311,17 @@ def author_data(csvData):
     return csvData
 author_data(county_data())
 
-
+county_name = input("Enter the county you would like to search for: ")
 def get_authors_by_county(csvData, county_name):
-    county_name = input("Enter the county you would like to search for: ")
+
     filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name]
     authors = filtered_csvData['Unnamed: 2'].tolist()
     if len(authors) == 0:#try this out 
         print("There are no authors in the county", county_name)
     else:
         print("Authors in", county_name, ":", authors)
-    return csvData, county
+    return authors
+get_authors_by_county()
 
 
 # got all of them as missing counties;
