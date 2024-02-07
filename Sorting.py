@@ -288,7 +288,7 @@ present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_
 print("here are the authors that are present in the data set", present_authors)
 
 missing_authors = [author for author in authors_names_array if author.strip() not in present_authors]
-print("Missing authors:", missing_authors)
+print("\033[34mMissing authors:", missing_authors)
 
 missing_authors_count = len(missing_authors)
 print("\033[34mNumber of missing authors:", missing_authors_count, "\033[0m")
