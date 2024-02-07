@@ -95,6 +95,11 @@ county_list = [
 # Possibly compose a sub list or conditional if it finds the county name in the list, then it will return the authors in that county  
 print(county_list) #sanity check
 
+
+csvData = pandas.read_csv('Spring Semester dataset2.csv')
+csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
+print(csvData)
+
 def Author_names(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
         file_path = '/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv'
