@@ -99,9 +99,12 @@ print(county_list) #sanity check
 # county is unnamed column 7 in the csv file 
 csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
 print(csvData.columns)
-csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
-'''filtered_csvData = csvData[csvData['Unnamed: 7 '].isin(county_list)]
-print(filtered_csvData)'''
+present_counties = csvData['County'].unique()
+missing_counties = [county for county in county_list if county.strip() not in present_counties]
+print("Missing counties:", missing_counties)
+#csvData.sort_values(["County"], axis=0, ascending=[False], inplace=True)
+#filtered_csvData = csvData[csvData['County'].isin(county_list)]
+#print(filtered_csvData)
 #print(csvData)'''
 
 def Author_names(file_path, encoding):
