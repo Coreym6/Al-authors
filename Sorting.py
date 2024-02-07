@@ -99,7 +99,8 @@ print(county_list) #sanity check
 # county is unnamed column 7 in the csv file 
 csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
 print(csvData.columns)
-present_counties = csvData['Unnamed: 6'].unique()
+present_counties = csvData['Unnamed: 6'].unique()#ACTUALLY WORKS; let me specify it can specify the counties that are in the list already.
+# let me give an number return to say the number of counties missing
 missing_counties = [county for county in county_list if county.strip() not in present_counties]
 print("Missing counties:", missing_counties)
 #present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
