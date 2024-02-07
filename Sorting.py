@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import matplotlib.pyplot as plt
 # Search up Python Dictionary; https://www.w3schools.com/python/python_dictionaries.asp
 
 # Prompt the user for the file path
@@ -284,6 +285,23 @@ def county_data():
 
     missing_counties_count = len(missing_counties)
     print("Number of missing counties:", missing_counties_count)
+
+
+    # Plot the number of missing counties
+    plt.bar(range(len(missing_counties)), [1] * len(missing_counties))
+    plt.xlabel('Missing Counties')
+    plt.ylabel('Count')
+    plt.title('Number of Missing Counties')
+    plt.xticks(range(len(missing_counties)), missing_counties, rotation='vertical')
+    plt.show()
+
+    # Plotting the graph
+    plt.bar(range(len(missing_counties)), missing_counties_count)
+    plt.xlabel('Missing Counties')
+    plt.ylabel('Count')
+    plt.title('Number of Missing Counties')
+    plt.xticks(range(len(missing_counties)), missing_counties)
+    plt.show()
     return csvData
 
 county_data()
