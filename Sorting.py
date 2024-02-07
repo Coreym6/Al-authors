@@ -337,7 +337,7 @@ def get_counties_by_author(csvData, author_name):
         print("Counties associated with", author_name, ":", counties)
     return counties
 
-get_counties_by_author(author_data(), author_name)
+get_counties_by_author(author_data(), author_name)# for some reason the error is: 
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
