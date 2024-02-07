@@ -300,7 +300,7 @@ def county_data():
 county_data()
 
 def author_data(csvData):
-    present_authors = csvData['Unnamed: 6'].unique() #unamed 2 is Author_first_name_last_name
+    present_authors = csvData['Unnamed: 2'].unique() #unamed 2 is Author_first_name_last_name
     print("here are the authors that are present in the data set", present_authors)
 
     missing_authors = [author for author in authors_names_array if author.strip() not in present_authors]
@@ -311,6 +311,18 @@ def author_data(csvData):
 
 author_data(county_data())
 
+
+def get_authors_by_county(csvData, county):
+    county_name = input("Enter the county you would like to search for: ")
+    filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name]
+    authors = filtered_csvData['Unnamed: 2'].tolist()
+    if len(authors) == 0:#try this out 
+        print("There are no authors in the county", county_name)
+    else:
+        print("Authors in", county_name, ":", authors)
+    return authors
+
+get_authors_by_county()
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
 
