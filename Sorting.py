@@ -21,7 +21,7 @@ descending = False if order.lower() == 'desc' else True'''
 
 # making the list of the couunty associations 
 # all 67 counties in Alabama 
-county_list = [ [
+county_list = [ 
         'Autauga',
         'Baldwin',
         'Barbour',
@@ -90,7 +90,7 @@ county_list = [ [
         'Wilcox',
         'Winston'
     ]
-] # Add correlation between column and County Name
+ # Add correlation between column and County Name
 # Possibly compose a sub list or conditional if it finds the county name in the list, then it will return the authors in that county  
 print(county_list) #sanity check
 
