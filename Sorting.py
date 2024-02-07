@@ -99,8 +99,10 @@ print(county_list) #sanity check
 
 csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
 print(csvData.columns)
-csvData.sort_values(["Unnamed: 7"], axis=0, ascending=[False], inplace=True)
-print(csvData)
+'''csvData.sort_values(["Unnamed: 7"], axis=0, ascending=[False], inplace=True)
+filtered_csvData = csvData[csvData['Unnamed: 7 '].isin(county_list)]
+print(filtered_csvData)
+#print(csvData)'''
 
 def Author_names(file_path, encoding):
     with open(file_path, 'r', encoding=encoding) as file:
