@@ -1,5 +1,9 @@
 import csv
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import os
+
 # Search up Python Dictionary; https://www.w3schools.com/python/python_dictionaries.asp
 
 # Prompt the user for the file path
