@@ -323,7 +323,7 @@ def get_authors_by_county(csvData, county_name):
     else:
         print("Authors in", county_name, ":", authors)
     return authors
-
+get_authors_by_county(county_data(), county_name)
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
