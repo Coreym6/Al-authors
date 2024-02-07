@@ -337,7 +337,7 @@ def get_counties_by_author(csvData, author_name):
         print("Counties associated with", author_name, ":", counties)
     return counties
 
-get_counties_by_author(author_data(), author_name)# for some reason the error is: 
+get_counties_by_author(author_data(), author_name)# for some reason the error is: TypeError: author_data() missing 1 required positional argument: 'csvData'
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
