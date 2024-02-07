@@ -325,6 +325,20 @@ def get_authors_by_county(csvData, county_name):
     return authors
 get_authors_by_county(county_data(), county_name)
 
+author_name = input("Enter the author you would like to search for: ")
+author_name = author_name.strip()
+def get_counties_by_author(csvData, author_name):
+    csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
+    filtered_csvData = csvData[csvData['Unnamed: 2'] == author_name]
+    counties = filtered_csvData['Unnamed: 6'].tolist()
+    if len(counties) == 0:
+        print("The author", author_name, "is not associated with any county.")
+    else:
+        print("Counties associated with", author_name, ":", counties)
+    return counties
+
+get_counties_by_author(author_data(), author_name)
+
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
 
