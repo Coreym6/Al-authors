@@ -1,4 +1,0 @@
-ERROR 6: IWriteBlock() not supported if georeferencing not set
-ERROR 6: IWriteBlock() not supported if georeferencing not set
-ERROR 6: IWriteBlock() not supported if georeferencing not set
-ERROR 1: Raster table visualization not correctly initialized due to missing call to SetGeoTransform()
