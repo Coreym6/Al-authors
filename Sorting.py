@@ -269,8 +269,9 @@ authors_names_array = [
     "Martha Young"
 
 ]
- # Add correlation between column and County Name
-# Possibly compose a sub list or conditional if it finds the county name in the list, then it will return the authors in that county  
+# COULD CONVERT THE LIST INTO A JSON FILE.
+
+
 
 
 # county is unnamed column 7 in the csv file 
@@ -341,6 +342,14 @@ def get_counties_by_author(csvData, author_name):
     return counties
 
 get_counties_by_author(county_data(), author_name)# for some reason the error is: TypeError: author_data() missing 1 required positional argument: 'csvData'
+
+
+# have another function for amount that of authors that are born in this county.
+
+
+# HAVE ANOTHER FUNCTION FOR AMOUNT OF AUTHORS THAT HAD AUDIENCE RESIDENCES IN THIS COUNTY
+
+
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
