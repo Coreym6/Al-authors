@@ -317,7 +317,8 @@ county_name = county_name.strip()
 def get_authors_by_county(csvData, county_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
     filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name] # this didn't work go back to original Unnamed 6
-    authors = filtered_csvData['Unnamed: 2'].tolist()
+    #maybe need to add another consideration for any catches of county association. i.e. unnamed 6, unnamed 7, unnamed 10
+    authors = filtered_csvData['Unnamed: 2'].tolist() 
     if len(authors) == 0:#try this out 
         print("There are no authors in the county", county_name)
     else:
