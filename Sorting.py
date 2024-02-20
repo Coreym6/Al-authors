@@ -334,7 +334,7 @@ def get_counties_by_author(csvData, author_name):
     #unnamed columns list comprehensions 
     unnamed_columns = ['Unnamed: 6', 'Unnamed: 7', 'Unnamed: 10']
     filtered_csvData = csvData[csvData['Unnamed: 2'] == author_name]
-    counties = filtered_csvData[unnamed_columns].tolist()
+    counties = filtered_csvData[unnamed_columns].values.tolist() # got this to work now. 
     if len(counties) == 0:
         print("The author", author_name, "is not associated with any county.")
     else:
