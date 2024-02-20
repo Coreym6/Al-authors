@@ -332,7 +332,7 @@ author_name = author_name.strip()
 def get_counties_by_author(csvData, author_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
     #unnamed columns list comprehensions 
-    unnamed_columns = ['Unnamed: 6', 'Unnamed: 7', 'Unnamed: 10']
+    unnamed_columns = ['Unnamed: 6', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
     filtered_csvData = csvData[csvData['Unnamed: 2'] == author_name]
     counties = filtered_csvData[unnamed_columns].values.tolist() # got this to work now. 
     if len(counties) == 0:
