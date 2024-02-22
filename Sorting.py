@@ -317,8 +317,8 @@ county_name = county_name.strip()
 
 def get_authors_by_county(csvData, county_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
-    authorU_columns = ['Unnamed: 2', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
-    filtered_csvData = csvData[csvData[authorU_columns] == county_name] # this didn't work go back to original Unnamed 6
+    #authorU_columns = ['Unnamed: 2', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
+    filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name] # this didn't work go back to original Unnamed 6
     #maybe need to add another consideration for any catches of county association. i.e. unnamed 6, unnamed 7, unnamed 10
     authors = filtered_csvData['Unnamed: 2'].tolist() 
     if len(authors) == 0:#try this out 
@@ -351,7 +351,7 @@ get_counties_by_author(county_data(), author_name)# for some reason the error is
 # have another function for amount that of authors that are born in this county.
 
 
-# HAVE ANOTHER FUNCTION FOR AMOUNT OF AUTHORS THAT HAD AUDIENCE RESIDENCES IN THIS COUNTY
+# HAVE ANOTHER FUNCTION FOR AMOUNT OF AUTHORS THAT HAD Adult RESIDENCES IN THIS COUNTY
 
 
 
