@@ -317,7 +317,8 @@ county_name = county_name.strip()
 
 def get_authors_by_county(csvData, county_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
-    filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name] # this didn't work go back to original Unnamed 6
+    authorU_columns = ['Unnamed: 2', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
+    filtered_csvData = csvData[csvData[authorU_columns] == county_name] # this didn't work go back to original Unnamed 6
     #maybe need to add another consideration for any catches of county association. i.e. unnamed 6, unnamed 7, unnamed 10
     authors = filtered_csvData['Unnamed: 2'].tolist() 
     if len(authors) == 0:#try this out 
@@ -329,12 +330,13 @@ get_authors_by_county(county_data(), county_name)
 
 author_name = input("Enter the author you would like to search for: ")
 author_name = author_name.strip()
+
 def get_counties_by_author(csvData, author_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
     #unnamed columns list comprehensions 
-    unnamed_columns = ['Unnamed: 6', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
+    countyU_columns = ['Unnamed: 6', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
     filtered_csvData = csvData[csvData['Unnamed: 2'] == author_name]
-    counties = filtered_csvData[unnamed_columns].values.tolist() # got this to work now. 
+    counties = filtered_csvData[countyU_columns].values.tolist() # got this to work now. 
     if len(counties) == 0:
         print("The author", author_name, "is not associated with any county.")
     else:
