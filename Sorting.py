@@ -309,7 +309,7 @@ def county_data(county_list):
 
     return csvData
 
-county_data()
+county_data(county_list)
 
 def author_data(csvData):
     present_authors = csvData['Unnamed: 2'].unique() #unamed 2 is Author_first_name_last_name
