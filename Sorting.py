@@ -275,7 +275,7 @@ authors_names_array = [
 
 
 # county is unnamed column 7 in the csv file 
-def county_data():
+def county_data(county_list):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
     print(csvData.columns, '\n')
     present_counties = csvData['Unnamed: 6'].unique()
@@ -287,13 +287,24 @@ def county_data():
     missing_counties_count = len(missing_counties)
     print("Number of missing counties:", missing_counties_count)
 
+     # Calculate the number of present counties
+    present_counties_count = len(present_counties)
+    print("Number of present counties:", present_counties_count)
 
-    # Plot the number of missing counties
-    plt.bar(range(len(missing_counties)), [1] * len(missing_counties))
-    plt.xlabel('Missing Counties')
-    plt.ylabel('Count')
-    plt.title('Number of Missing Counties')
-    plt.xticks(range(len(missing_counties)), missing_counties, rotation='vertical')
+    # Calculate the ratio of present counties to total counties
+    total_counties = 67  # Total number of counties in Alabama
+    present_ratio = present_counties_count / total_counties
+    print(f"Ratio of present counties to total counties: {present_ratio:.2f}")
+
+    # Visualize the ratio of present counties
+    labels = 'Present Counties', 'Missing Counties'
+    sizes = [present_counties_count, total_counties - present_counties_count]
+    colors = ['lightblue', 'lightgrey']
+    explode = (0.1, 0)  # explode the first slice
+    
+    plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.title('Ratio of Present Counties to Total Counties in Alabama')
     plt.show()
 
     return csvData
