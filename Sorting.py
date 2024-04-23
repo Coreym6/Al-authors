@@ -269,12 +269,13 @@ authors_names_array = [
     "Martha Young"
 
 ]
- # Add correlation between column and County Name
-# Possibly compose a sub list or conditional if it finds the county name in the list, then it will return the authors in that county  
+# COULD CONVERT THE LIST INTO A JSON FILE.
+
+
 
 
 # county is unnamed column 7 in the csv file 
-def county_data():
+def county_data(county_list):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
     print(csvData.columns, '\n')
     present_counties = csvData['Unnamed: 6'].unique()
@@ -286,18 +287,29 @@ def county_data():
     missing_counties_count = len(missing_counties)
     print("Number of missing counties:", missing_counties_count)
 
+     # Calculate the number of present counties
+    present_counties_count = len(present_counties)
+    print("Number of present counties:", present_counties_count)
 
-    # Plot the number of missing counties
-    plt.bar(range(len(missing_counties)), [1] * len(missing_counties))
-    plt.xlabel('Missing Counties')
-    plt.ylabel('Count')
-    plt.title('Number of Missing Counties')
-    plt.xticks(range(len(missing_counties)), missing_counties, rotation='vertical')
+    # Calculate the ratio of present counties to total counties
+    total_counties = 67  # Total number of counties in Alabama
+    present_ratio = present_counties_count / total_counties
+    print(f"Ratio of present counties to total counties: {present_ratio:.2f}")
+
+    # Visualize the ratio of present counties
+    labels = 'Present Counties', 'Missing Counties'
+    sizes = [present_counties_count, total_counties - present_counties_count]
+    colors = ['lightblue', 'lightgrey']
+    explode = (0.1, 0)  # explode the first slice
+    
+    plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.title('Ratio of Present Counties to Total Counties in Alabama')
     plt.show()
 
     return csvData
 
-county_data()
+county_data(county_list)
 
 def author_data(csvData):
     present_authors = csvData['Unnamed: 2'].unique() #unamed 2 is Author_first_name_last_name
@@ -316,8 +328,10 @@ county_name = county_name.strip()
 
 def get_authors_by_county(csvData, county_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
+    #authorU_columns = ['Unnamed: 2', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
     filtered_csvData = csvData[csvData['Unnamed: 6'] == county_name] # this didn't work go back to original Unnamed 6
-    authors = filtered_csvData['Unnamed: 2'].tolist()
+    #maybe need to add another consideration for any catches of county association. i.e. unnamed 6, unnamed 7, unnamed 10
+    authors = filtered_csvData['Unnamed: 2'].tolist() 
     if len(authors) == 0:#try this out 
         print("There are no authors in the county", county_name)
     else:
@@ -327,10 +341,13 @@ get_authors_by_county(county_data(), county_name)
 
 author_name = input("Enter the author you would like to search for: ")
 author_name = author_name.strip()
+
 def get_counties_by_author(csvData, author_name):
     csvData = pd.read_csv('/Users/coreymcdaniels/Desktop/Al Authors Local /Al-authors/Spring Semester dataset 2.csv')
+    #unnamed columns list comprehensions 
+    countyU_columns = ['Unnamed: 6', 'Unnamed: 7','Unnamed: 9', 'Unnamed: 10']
     filtered_csvData = csvData[csvData['Unnamed: 2'] == author_name]
-    counties = filtered_csvData['Unnamed: 6'].tolist()
+    counties = filtered_csvData[countyU_columns].values.tolist() # got this to work now. 
     if len(counties) == 0:
         print("The author", author_name, "is not associated with any county.")
     else:
@@ -340,6 +357,14 @@ def get_counties_by_author(csvData, author_name):
     return counties
 
 get_counties_by_author(county_data(), author_name)# for some reason the error is: TypeError: author_data() missing 1 required positional argument: 'csvData'
+
+
+# have another function for amount that of authors that are born in this county.
+
+
+# HAVE ANOTHER FUNCTION FOR AMOUNT OF AUTHORS THAT HAD Adult RESIDENCES IN THIS COUNTY
+
+
 
 # got all of them as missing counties;
 # I think that maybe it's pointing to the wrong column. 
